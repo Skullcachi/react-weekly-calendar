@@ -1,0 +1,189 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.container {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.navigation-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.calendar {
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.month {
+  margin-bottom: 50px;
+}
+
+.previous-week, .next-week {
+  font-size: 18px;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 15px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.7px);
+  -webkit-backdrop-filter: blur(5.7px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  opacity: 0.3;
+}
+
+.selected {
+  background-color: #0a3000;
+  border-radius: 15px;
+} 
+  
+.today {
+  background-color: #026b72;
+  border-radius: 15px;
+}
+
+.day{
+  font-size: 18px;
+  font-family: "Vibur", sans-serif;
+  background-color: #010a01;
+  border-style: none;
+  border-radius: 15px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.day:hover {
+  cursor: pointer;
+}
+
+.day-content {
+  color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+  width: 115px;
+  height: 150px;
+  align-self: center;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.btn{
+  font-size: 18px;
+  font-family: "Vibur", sans-serif;
+  background-color: #010a01;
+  border-style: none;
+  border-radius: 15%;
+  height: 50px;
+  width: 45px;
+  cursor: pointer;
+  margin: 15px;
+}
+
+.btn:hover {
+  height: 55px;
+  width: 50px;
+  transition: ease-in 0.1s;
+}
+
+.btn-calendar {
+  color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+}
+
+
+.custom-date {
+  font-size: 18px;
+  font-family: "Vibur", sans-serif;
+  height: 30px;
+  border-radius: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: none;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #0fa,
+      0 0 80px #0fa,
+      0 0 90px #0fa,
+      0 0 100px #0fa,
+      0 0 150px #0fa;
+  }
+  20%, 24%, 55% {       
+    text-shadow: none;
+  }
+}
+
+.day-content h3, .day-content p {
+  animation: flicker 2s infinite alternate;
+}
+
+.btn-calendar h1 {
+  animation: flicker 1.5s infinite alternate;
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
