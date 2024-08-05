@@ -31,9 +31,7 @@
   font-size: calc(10px + 2vmin);
 }
 
-.month {
-  margin-bottom: 50px;
-}
+
 
 .previous-week, .next-week {
   font-size: 18px;

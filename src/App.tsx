@@ -1,12 +1,12 @@
 import moment from 'moment';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
 
   // Sets the default current week
   const [currentWeek, setCurrentWeek] = useState(moment());
-  const [currentDay, setCurrentDay] = useState(moment());
+  const [currentDay] = useState(moment());
   const [selectedDay, setSelectedDay] = useState(moment());
   const [customDate, setCustomDate] = useState(moment());
 
